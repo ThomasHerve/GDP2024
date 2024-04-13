@@ -49,15 +49,15 @@ export class AsymetricUnityTemplateComponent implements OnInit {
         document.getElementById("0")!.style.backgroundColor = "grey"
         document.getElementById("1")!.style.backgroundColor = "grey"
         document.getElementById("2")!.style.backgroundColor = "grey"
-        document.getElementById("3")!.style.backgroundColor = "grey"
+        //document.getElementById("3")!.style.backgroundColor = "grey"
         document.getElementById("0")!.style.filter = "grayscale(100%)"
         document.getElementById("1")!.style.filter = "grayscale(100%)"
         document.getElementById("2")!.style.filter = "grayscale(100%)"
-        document.getElementById("3")!.style.filter = "grayscale(100%)"
+       // document.getElementById("3")!.style.filter = "grayscale(100%)"
         document.getElementById("0")!.style.cursor = "not-allowed"
         document.getElementById("1")!.style.cursor = "not-allowed"
         document.getElementById("2")!.style.cursor = "not-allowed"
-        document.getElementById("3")!.style.cursor = "not-allowed"
+        //document.getElementById("3")!.style.cursor = "not-allowed"
 
         document.getElementById(value)!.style.border = "10px solid red"
         document.getElementById(value)!.style.removeProperty("filter")
@@ -77,23 +77,23 @@ export class AsymetricUnityTemplateComponent implements OnInit {
       console.log(o.image_map.get(m[1]));
        o.image1 = o.image_map.get(m[1]) ||"";
        o.image2 = o.image_map.get(m[2]) ||"";
-       o.image3 = o.image_map.get(m[3]) ||"";
+       //o.image3 = o.image_map.get(m[3]) ||"";
        document.getElementById("0")!.style.backgroundColor = "#1a237e"
        document.getElementById("1")!.style.backgroundColor = "#1a237e"
        document.getElementById("2")!.style.backgroundColor = "#1a237e"
-       document.getElementById("3")!.style.backgroundColor = "#1a237e"
+       //document.getElementById("3")!.style.backgroundColor = "#1a237e"
        document.getElementById("0")!.style.removeProperty("filter")
        document.getElementById("1")!.style.removeProperty("filter")
        document.getElementById("2")!.style.removeProperty("filter")
-       document.getElementById("3")!.style.removeProperty("filter")
+       //document.getElementById("3")!.style.removeProperty("filter")
        document.getElementById("0")!.style.border ="10px solid #3949ab"
        document.getElementById("1")!.style.border ="10px solid #3949ab"
        document.getElementById("2")!.style.border ="10px solid #3949ab"
-       document.getElementById("3")!.style.border ="10px solid #3949ab"
+       //document.getElementById("3")!.style.border ="10px solid #3949ab"
        document.getElementById("0")!.style.removeProperty("cursor")
        document.getElementById("1")!.style.removeProperty("cursor")
        document.getElementById("2")!.style.removeProperty("cursor")
-       document.getElementById("3")!.style.removeProperty("cursor")
+       //document.getElementById("3")!.style.removeProperty("cursor")
        if(!o.isEmpty) {
         o.clicked = false;
        }
