@@ -19,6 +19,7 @@ export class AsymetricUnityTemplateComponent implements OnInit {
   image3: string = "";
 
   isEmpty: boolean = true;
+  clicked: boolean = false
 
   image_map: Map<string, string> = new Map<string, string>([
     ["0", "chat.jpg"],
@@ -39,49 +40,12 @@ export class AsymetricUnityTemplateComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.variable = params['variable'];
     });
-    this.animation("0");
-    this.animation("1");
-    this.animation("2");
-    this.animation("3");
-
-    // Cooldown
-    interval(100)
-    .subscribe(() => {
-      if(this.currentCooldown < this.cooldown) {
-        this.currentCooldown += 0.1;
-        if(this.currentCooldown > this.cooldown) {
-          this.currentCooldown = this.cooldown;
-          document.getElementById("0")!.style.backgroundColor = "#1a237e"
-          document.getElementById("1")!.style.backgroundColor = "#1a237e"
-          document.getElementById("2")!.style.backgroundColor = "#1a237e"
-          document.getElementById("3")!.style.backgroundColor = "#1a237e"
-          document.getElementById("0")!.style.filter = "grayscale(0%)"
-          document.getElementById("1")!.style.filter = "grayscale(0%)"
-          document.getElementById("2")!.style.filter = "grayscale(0%)"
-          document.getElementById("3")!.style.filter = "grayscale(0%)"
-        }
-      }
-    });
 
   }
 
-  animation(value: string) {
-    const animated = document.getElementById(value);
-
-    animated!.addEventListener("animationend", (x) => {
-      if(x.animationName == "anim") {
-        animated?.classList.remove('anim');
-      }
-      else {
-        animated?.classList.remove('loading');
-      }
-    });
-  }
 
   click(value: string) {
     if(!this.isEmpty) {
-      if(this.currentCooldown == this.cooldown) {
-        this.currentCooldown = 0;
         document.getElementById("0")!.style.backgroundColor = "grey"
         document.getElementById("1")!.style.backgroundColor = "grey"
         document.getElementById("2")!.style.backgroundColor = "grey"
@@ -90,15 +54,15 @@ export class AsymetricUnityTemplateComponent implements OnInit {
         document.getElementById("1")!.style.filter = "grayscale(100%)"
         document.getElementById("2")!.style.filter = "grayscale(100%)"
         document.getElementById("3")!.style.filter = "grayscale(100%)"
-        const animated = document.getElementById(value);
-        animated?.classList.add('anim');
+        document.getElementById("0")!.style.cursor = "not-allowed"
+        document.getElementById("1")!.style.cursor = "not-allowed"
+        document.getElementById("2")!.style.cursor = "not-allowed"
+        document.getElementById("3")!.style.cursor = "not-allowed"
+
+        document.getElementById(value)!.style.border = "10px solid red"
+        document.getElementById(value)!.style.removeProperty("filter")
         this.urlService.publish(this.variable, value).subscribe((x)=>console.log)  
-  
-        document.getElementById("0")!.classList.add('loading')
-        document.getElementById("1")!.classList.add('loading')
-        document.getElementById("2")!.classList.add('loading')
-        document.getElementById("3")!.classList.add('loading')      
-      }
+        this.clicked = true;
     } else {
       this.urlService.publish(this.variable, "emoji-"+value).subscribe((x)=>console.log)  
     }
@@ -114,8 +78,30 @@ export class AsymetricUnityTemplateComponent implements OnInit {
        o.image1 = o.image_map.get(m[1]) ||"";
        o.image2 = o.image_map.get(m[2]) ||"";
        o.image3 = o.image_map.get(m[3]) ||"";
+       document.getElementById("0")!.style.backgroundColor = "#1a237e"
+       document.getElementById("1")!.style.backgroundColor = "#1a237e"
+       document.getElementById("2")!.style.backgroundColor = "#1a237e"
+       document.getElementById("3")!.style.backgroundColor = "#1a237e"
+       document.getElementById("0")!.style.removeProperty("filter")
+       document.getElementById("1")!.style.removeProperty("filter")
+       document.getElementById("2")!.style.removeProperty("filter")
+       document.getElementById("3")!.style.removeProperty("filter")
+       document.getElementById("0")!.style.border ="10px solid #3949ab"
+       document.getElementById("1")!.style.border ="10px solid #3949ab"
+       document.getElementById("2")!.style.border ="10px solid #3949ab"
+       document.getElementById("3")!.style.border ="10px solid #3949ab"
+       document.getElementById("0")!.style.removeProperty("cursor")
+       document.getElementById("1")!.style.removeProperty("cursor")
+       document.getElementById("2")!.style.removeProperty("cursor")
+       document.getElementById("3")!.style.removeProperty("cursor")
+       if(!o.isEmpty) {
+        o.clicked = false;
+       }
+       o.isEmpty = false;
      }
-     o.isEmpty = false;
+     
+     
+
   }
 
 
