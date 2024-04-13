@@ -22,9 +22,9 @@ export class AsymetricUnityTemplateComponent implements OnInit {
   clicked: boolean = false
 
   image_map: Map<string, string> = new Map<string, string>([
-    ["0", "chat.jpg"],
-    ["1", "chat 2.jpg"],
-    ["2", "chat 3.jpg"],
+    ["0", "Cadre_Foreuse.png"],
+    ["1", "Cadre_Mini.png"],
+    ["2", "Cadre_WallJump.png"],
     ["3", "chat 4.jpg"],
     ["4", "chat 5.jpg"],
     ["5", "chat 6.jpg"]
@@ -46,9 +46,6 @@ export class AsymetricUnityTemplateComponent implements OnInit {
 
   click(value: string) {
     if(!this.isEmpty) {
-        document.getElementById("0")!.style.backgroundColor = "grey"
-        document.getElementById("1")!.style.backgroundColor = "grey"
-        document.getElementById("2")!.style.backgroundColor = "grey"
         //document.getElementById("3")!.style.backgroundColor = "grey"
         document.getElementById("0")!.style.filter = "grayscale(100%)"
         document.getElementById("1")!.style.filter = "grayscale(100%)"
@@ -59,8 +56,9 @@ export class AsymetricUnityTemplateComponent implements OnInit {
         document.getElementById("2")!.style.cursor = "not-allowed"
         //document.getElementById("3")!.style.cursor = "not-allowed"
 
-        document.getElementById(value)!.style.border = "10px solid red"
         document.getElementById(value)!.style.removeProperty("filter")
+        document.getElementById(value)!.style.filter = "sepia(100%);"
+
         this.urlService.publish(this.variable, value).subscribe((x)=>console.log)  
         this.clicked = true;
     } else {
@@ -78,17 +76,11 @@ export class AsymetricUnityTemplateComponent implements OnInit {
        o.image1 = o.image_map.get(m[1]) ||"";
        o.image2 = o.image_map.get(m[2]) ||"";
        //o.image3 = o.image_map.get(m[3]) ||"";
-       document.getElementById("0")!.style.backgroundColor = "#1a237e"
-       document.getElementById("1")!.style.backgroundColor = "#1a237e"
-       document.getElementById("2")!.style.backgroundColor = "#1a237e"
        //document.getElementById("3")!.style.backgroundColor = "#1a237e"
        document.getElementById("0")!.style.removeProperty("filter")
        document.getElementById("1")!.style.removeProperty("filter")
        document.getElementById("2")!.style.removeProperty("filter")
        //document.getElementById("3")!.style.removeProperty("filter")
-       document.getElementById("0")!.style.border ="10px solid #3949ab"
-       document.getElementById("1")!.style.border ="10px solid #3949ab"
-       document.getElementById("2")!.style.border ="10px solid #3949ab"
        //document.getElementById("3")!.style.border ="10px solid #3949ab"
        document.getElementById("0")!.style.removeProperty("cursor")
        document.getElementById("1")!.style.removeProperty("cursor")

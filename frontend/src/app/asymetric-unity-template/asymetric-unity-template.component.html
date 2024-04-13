@@ -8,8 +8,8 @@
   <!-- 
 <div *ngIf="currentCooldown < cooldown" class="timer">{{(5 - currentCooldown).toFixed(1)}}</div>
 -->
-<div class="button" id="0" (click)="!clicked && click('0')"><img *ngIf="!isEmpty" src="assets/images/{{image1}}" alt="Image 1"><span *ngIf="isEmpty">💡</span></div>
-<div class="button" id="1" (click)="!clicked && click('1')"><img *ngIf="!isEmpty" src="assets/images/{{image2}}" alt="Image 2"><span *ngIf="isEmpty">🫀</span></div>
+<div class="button" id="0" (click)="!clicked && click('0')"><img *ngIf="!isEmpty" src="assets/images/{{image1}}" alt="Image 1"/><img *ngIf="isEmpty" src="assets/images/gdp.png"/></div>
+<div class="button" id="1" (click)="!clicked && click('1')"><img *ngIf="!isEmpty" src="assets/images/{{image2}}" alt="Image 2"/><img *ngIf="isEmpty" src="assets/images/polepixel.png"/></div>
 <!-- <div class="button" id="2" (click)="!clicked && click('2')"><img *ngIf="!isEmpty" src="assets/images/{{image3}}" alt="Image 3"><span *ngIf="isEmpty">👻</span></div>-->
-<div class="button" id="2" (click)="!clicked && click('2')"><img *ngIf="!isEmpty" src="assets/images/croix.png" alt="Image 3"><span *ngIf="isEmpty">🪟</span></div>
+<div class="button" id="2" (click)="!clicked && click('2')"><img *ngIf="!isEmpty" src="assets/images/croix.png" alt="Image 3"/><img *ngIf="isEmpty" src="assets/images/gdp.png"></div>
 </div>
