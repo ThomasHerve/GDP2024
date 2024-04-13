@@ -99,7 +99,11 @@
 .anim {
     animation: anim 0.8s;
   }
-  
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 @keyframes anim {
     0% {
         transform: scale(1);

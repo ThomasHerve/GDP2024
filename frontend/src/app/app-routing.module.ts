@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AsymetricUnityTemplateComponent } from './asymetric-unity-template/asymetric-unity-template.component';
 
 const routes: Routes = [
+  { path: '', component: AsymetricUnityTemplateComponent },
   { path: ':variable', component: AsymetricUnityTemplateComponent },
   // Autres routes si nécessaire
 ];
