@@ -9,8 +9,8 @@
     }
     
     .button {
-        width: calc(15vh - 15px); /* Largeur égale à la hauteur pour faire un bouton carré */
-        height: calc(15vh - 15px); /* Hauteur égale à la largeur pour faire un bouton carré */
+        width: calc(20vh - 20px); /* Largeur égale à la hauteur pour faire un bouton carré */
+        height: calc(20vh - 20px); /* Hauteur égale à la largeur pour faire un bouton carré */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,8 +24,8 @@
     }
 
     .timer {
-        width: calc(15vw - 15px); /* Largeur égale à la hauteur pour faire un bouton carré */
-        height: calc(15vw - 15px); /* Hauteur égale à la largeur pour faire un bouton carré */
+        width: calc(20vw - 20px); /* Largeur égale à la hauteur pour faire un bouton carré */
+        height: calc(20vw - 20px); /* Hauteur égale à la largeur pour faire un bouton carré */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,8 +46,8 @@
     }
     
     .button {
-        width: calc(15vw - 15px); /* Largeur égale à la hauteur pour faire un bouton carré */
-        height: calc(15vw - 15px); /* Hauteur égale à la largeur pour faire un bouton carré */
+        width: calc(20vw - 20px); /* Largeur égale à la hauteur pour faire un bouton carré */
+        height: calc(20vw - 20px); /* Hauteur égale à la largeur pour faire un bouton carré */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,8 +61,8 @@
     }
 
     .timer {
-        width: calc(15vw - 15px); /* Largeur égale à la hauteur pour faire un bouton carré */
-        height: calc(15vw - 15px); /* Hauteur égale à la largeur pour faire un bouton carré */
+        width: calc(20vw - 20px); /* Largeur égale à la hauteur pour faire un bouton carré */
+        height: calc(20vw - 20px); /* Hauteur égale à la largeur pour faire un bouton carré */
         display: flex;
         justify-content: center;
         align-items: center;
