@@ -24,8 +24,8 @@ export class AsymetricUnityTemplateComponent implements OnInit {
   image_map: Map<string, string> = new Map<string, string>([
     ["0", "Cadre_Foreuse.png"],
     ["1", "Cadre_Mini.png"],
-    ["2", "Cadre_WallJump.png"],
-    ["3", "chat 4.jpg"],
+    ["2", "Cadre_Jetpack.png"],
+    ["3", "Cadre_WallJump.jpg"],
     ["4", "chat 5.jpg"],
     ["5", "chat 6.jpg"]
 ]);
