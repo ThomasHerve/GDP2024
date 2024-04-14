@@ -25,7 +25,7 @@ export class AsymetricUnityTemplateComponent implements OnInit {
     ["0", "Cadre_Foreuse.png"],
     ["1", "Cadre_Mini.png"],
     ["2", "Cadre_Jetpack.png"],
-    ["3", "Cadre_WallJump.jpg"],
+    ["3", "Cadre_WallJump.png"],
     ["4", "chat 5.jpg"],
     ["5", "chat 6.jpg"]
 ]);
